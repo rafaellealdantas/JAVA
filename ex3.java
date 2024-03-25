@@ -30,9 +30,9 @@ public class ex3
         for(int i = 0; i < alunos.length; i++)
         {
             // calculo da média
-            var media = (Double.parseDouble(alunos[i][2]) + Double.parseDouble(alunos[i][3])) / 2;
+            Double media = (Double.parseDouble(alunos[i][2]) + Double.parseDouble(alunos[i][3])) / 2;
             // status do aluno
-            var status = media < 6 ?
+            String status = media < 6 ?
             "aprovado ()sim (x)não"
             :
             "aprovado (x)sim ()não";
