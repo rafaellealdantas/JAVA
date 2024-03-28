@@ -6,12 +6,18 @@ public class SaqueDeposito
 {   
     ContaBancaria contaBancaria = new ContaBancaria("marcos" , 1000);    
     Scanner scanner = new Scanner(System.in);
+    // pede os dados do usuário
     public void pergunta()
     
-    {   
+    {
+        System.out.println("digite o número da conta:");
+        contaBancaria.numConta = scanner.nextInt();
+        System.out.println("digite o nome do titular:");   
+        contaBancaria.titular = scanner.next();
         System.out.println("digite 1 para sacar ou 2 para depositar");
         contaBancaria.resposta = scanner.nextInt();
     }
+    // faz os calculos de saque e despósito chamando os métodos "saque" e "deposito" que estão na classe ContaBancaria
     public void resultado()
     {
         switch (contaBancaria.resposta) {
