@@ -6,7 +6,13 @@ public class Main
     {
         Aluno aluno1 = new Aluno();
         aluno1.informacoes();
-        aluno1.resultado();
-        
+        try 
+        {
+            aluno1.resultado();
+        } 
+        catch (RuntimeException e) 
+        {
+            System.out.println("Erro: " + e.getMessage());
+        }       
     }
 }

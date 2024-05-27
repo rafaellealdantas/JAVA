@@ -44,7 +44,15 @@ public class Aluno
     } 
     public void resultado()
     {
-        if (media() < 7) 
+        if (media() < 0) 
+        {
+            throw new RuntimeException("Nota negativa não é permitido.");
+        }
+        else if(media() > 10)
+        {
+            throw new RuntimeException("A nota máxima deve ser até 10.");
+        }
+        else if(media() < 7)
         {
             System.out.println("a primeira nota foi: "  + nota1);
             System.out.println("a sugunda nota foi: " +  nota2);
@@ -60,6 +68,7 @@ public class Aluno
             System.out.println("O aluno " + nome + " está: aprovado (X) reprovado()"); 
         }
     }
+
     
     public double getMedia() {
         return media;
