@@ -41,7 +41,7 @@ public class Aluno
         this.nota2 = nota2;
 
         scanner.close();               
-    }
+    } 
     public void resultado()
     {
         if (media() < 7) 
@@ -50,6 +50,14 @@ public class Aluno
             System.out.println("a sugunda nota foi: " +  nota2);
             System.out.println("a média foi: " + media());
             System.out.println("aprovado () reprovado(X)");
+        }
+        else
+        if (media() >= 7) 
+        {
+            System.out.println("a primeira nota foi: "  + nota1);
+            System.out.println("a sugunda nota foi: " +  nota2);
+            System.out.println("a média foi: " + media());
+            System.out.println("O aluno " + nome + " está: aprovado (X) reprovado()"); 
         }
     }
     
